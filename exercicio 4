@@ -1,0 +1,41 @@
+
+soma_salarios = 0
+
+mais_novo = 999
+mais_velho = -1
+
+atacantes_salario_baixo = 0
+atacantes = 0
+defensores = 0
+
+for i in range(10):
+    idade = int(input(f"Idade do jogador {i+1}: "))
+    posicao = input("Posição (A - atacante, D - defensor): ").upper()
+    salario = float(input("Salário: "))
+
+    soma_salarios += salario
+
+    # idade
+    if idade < mais_novo:
+        mais_novo = idade
+    if idade > mais_velho:
+        mais_velho = idade
+
+    # contagem por posição
+    if posicao == "A":
+        atacantes += 1
+        if salario <= 10000:
+            atacantes_salario_baixo += 1
+    elif posicao == "D":
+        defensores += 1
+
+# cálculos finais
+media_salarios = soma_salarios / 10
+
+print("\nRESULTADOS:")
+print(f"Média dos salários: R$ {media_salarios:.2f}")
+print(f"Jogador mais novo: {mais_novo} anos")
+print(f"Jogador mais velho: {mais_velho} anos")
+print(f"Atacantes com salário até 10.000: {atacantes_salario_baixo}")
+print(f"Total de atacantes: {atacantes}")
+print(f"Total de defensores: {defensores}")
