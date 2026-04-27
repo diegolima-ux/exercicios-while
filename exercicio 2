@@ -1,0 +1,10 @@
+codigo = -1
+contador_1040 = 0
+
+while codigo != 0:
+    codigo = int(input("Digite o código do brinquedo (0 para sair): "))
+
+    if codigo == 1040:
+        contador_1040 += 1
+
+print("Quantidade de carrinhos 1040 vendidos:", contador_1040)
