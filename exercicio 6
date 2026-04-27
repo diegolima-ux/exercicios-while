@@ -1,0 +1,20 @@
+expresso = 0
+cappuccino = 0
+cha = 0
+
+for i in range(10):
+    voto = input(f"Cliente {i+1} (A - Expresso, B - Cappuccino, C - Chá): ").upper()
+
+    if voto == "A":
+        expresso += 1
+    elif voto == "B":
+        cappuccino += 1
+    elif voto == "C":
+        cha += 1
+
+total = 10
+
+print("\nRESULTADOS:")
+print(f"Expresso: {expresso} votos ({(expresso/total)*100:.1f}%)")
+print(f"Cappuccino: {cappuccino} votos ({(cappuccino/total)*100:.1f}%)")
+print(f"Chá: {cha} votos ({(cha/total)*100:.1f}%)")
