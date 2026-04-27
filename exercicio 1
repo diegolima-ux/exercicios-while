@@ -1,0 +1,36 @@
+capacidade = 100
+ingressos_disponiveis = 100
+
+while True:
+    print("\n1 - Vender ingresso")
+    print("2 - Adicionar ingressos extras")
+    print("3 - Mostrar ingressos disponíveis")
+    print("4 - Encerrar")
+
+    opcao = int(input("Escolha: "))
+
+    if opcao == 1:
+        quantidade = int(input("Quantos ingressos deseja vender? "))
+        if quantidade <= ingressos_disponiveis:
+            ingressos_disponiveis -= quantidade
+            print("Venda realizada!")
+        else:
+            print("Ingressos insuficientes!")
+
+    elif opcao == 2:
+        quantidade = int(input("Quantos ingressos deseja adicionar? "))
+        if ingressos_disponiveis + quantidade <= capacidade:
+            ingressos_disponiveis += quantidade
+            print("Ingressos adicionados!")
+        else:
+            print("Excede a capacidade!")
+
+    elif opcao == 3:
+        print(f"Ingressos disponíveis: {ingressos_disponiveis}")
+
+    elif opcao == 4:
+        print("Encerrando...")
+        break
+
+    else:
+        print("Opção inválida!")
