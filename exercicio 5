@@ -1,0 +1,9 @@
+maiores_18 = 0
+
+for i in range(10):
+    idade = int(input(f"Idade da pessoa {i+1}: "))
+    
+    if idade >= 18:
+        maiores_18 += 1
+
+print(f"\nQuantidade de pessoas com 18 anos ou mais: {maiores_18}")
